@@ -1,10 +1,10 @@
 import styles from './card.module.css'
 import Image from 'next/image'
-// import CreditCard from '../public/images/credit-card.svg'
+import CreditCard from '../public/credit-card.svg'
 
 const Card = () => {
   return (
-    <div className="grid">
+    <div className={styles.mainCont}>
       <form className={styles.form}>
         <p className={styles.categoryLabel}>Spend Limit</p>
         <div className={styles.amount}>$100</div>
@@ -37,13 +37,25 @@ const Card = () => {
               type='email'
             />  
           </div>
+          <input 
+            type='checkbox'
+          />
+          <div className={styles.inputCont}>
+            <label className={styles.label}>SMS</label>
+            <input 
+              className={styles.input}
+              placeholder='Cell Phone Number'
+              type='text'
+            />  
+          </div>
         </div>
       </form>
-      <div>
+      <div className={styles.rightCont}>
         <Image 
-          // src={CreditCard} 
-          width={250} 
-          height={125} 
+          className={styles.image}
+          src={CreditCard} 
+          width={350} 
+          height={175} 
           alt="image of credit card"
         />
         <div className={styles.buttonsContainer} >
