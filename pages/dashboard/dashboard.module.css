@@ -1,6 +1,8 @@
 .container {
   display: flex;
   background-color: #f6f6fe;
+  height: 982px;
+  /* padding: 68px 118px 106px 0px; */
 }
 
 /* .sideBar {
@@ -8,3 +10,25 @@
   width: 314px;
   background-color: rgba(122, 121, 142, 0.09);
 } */
+
+.right {
+  width: 100%;
+  padding: 68px 118px 106px 98px;
+}
+
+.user_container {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 8px;
+}
+
+.user {
+  font-family: var(--karla);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+
+  color: #3e4958;
+}
