@@ -9,8 +9,15 @@
   align-items: center;
 }
 
+.logo{
+  margin-bottom: 2.5rem;
+}
+
 .label {
+  margin-left: 1rem;
   font-size: 24px;
+  font-family: 'Andada Pro', serif;
+  margin-bottom: 5px;
 }
 
 .inputIcon {
@@ -20,7 +27,7 @@
 }
 
 .input {
-  margin: 0;
+  margin-bottom: 20px;
   font-size: 1rem;
   padding: 1rem;
   border: none;
@@ -32,7 +39,7 @@
 .forgot {
   font-size: 1rem;
   margin-bottom: 3rem;
-  /* width: 100%; */
+  
 }
 
 .button {

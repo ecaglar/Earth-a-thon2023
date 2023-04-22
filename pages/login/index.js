@@ -1,12 +1,13 @@
 import styles from "./index.module.css";
 import { CiMail } from 'react-icons/ci'
 import { AiOutlineLock } from 'react-icons/ai'
+// import { flexLogo } from 'public\images\flex-support-logo.svg'
 
 const Login = () => {
   return (
     <div>
       <form method="POST" action="" className={styles.form}>
-      <h1>FlexSuppor Logo</h1>
+      <img src="/images/flex-support-logo.svg" className={styles.logo}/>
         <div>
           <p className={styles.label}>Email</p>
           <CiMail  className={styles.inputIcon}/>
