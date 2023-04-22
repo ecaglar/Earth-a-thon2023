@@ -1,13 +1,15 @@
 import styles from "./index.module.css";
 import { CiMail } from "react-icons/ci";
 import { AiOutlineLock } from "react-icons/ai";
-// import { flexLogo } from 'public\images\flex-support-logo.svg'
+import { AiOutlineEyeInvisible } from 'react-icons/ai'
+import Image from 'next/image'
+import FlexLogo from 'public/flex-logo.svg'
 
 const Login = () => {
   return (
     <div>
       <form method="POST" action="" className={styles.form}>
-        <img src="/images/flex-support-logo.svg" className={styles.logo} />
+        <Image src={FlexLogo} className={styles.logo} alt="large logo" />
         <div>
           <p className={styles.label}>Email</p>
           <CiMail className={styles.inputIcon} />
@@ -28,6 +30,7 @@ const Login = () => {
             name="password"
             placeholder="Your Password"
           />
+          <AiOutlineEyeInvisible />
         </div>
 
         <p className={styles.forgot}>Forgot Password?</p>
