@@ -1,8 +1,8 @@
-import styles from './card.module.css'
-import Image from 'next/image'
-import CreditCard from '../public/credit-card.svg'
+import styles from "./card.module.css";
+import Image from "next/image";
+import CreditCard from "../public/credit-card.svg";
 
-const Card = () => {
+const Card = ({ activePageHandler }) => {
   return (
     <div className={styles.mainCont}>
       <form className={styles.form}>
@@ -14,10 +14,8 @@ const Card = () => {
         </div>
         <div className={styles.frequencyButtonsCont}>
           <button className={styles.frequencyButton}>
-            <span>
-              Single-Use
-            </span>
-              Closes shortly after first use
+            <span>Single-Use</span>
+            Closes shortly after first use
           </button>
           <button className={styles.frequencyButton}>Per Month</button>
           <button className={styles.frequencyButton}>Per Year</button>
@@ -26,49 +24,49 @@ const Card = () => {
         </div>
         <p className={styles.categoryLabel}>Delivery Method</p>
         <div className={styles.deliveryCont}>
-          <input 
-            type='checkbox'
-          />
+          <input type="checkbox" />
           <div className={styles.inputCont}>
             <label className={styles.label}>Email</label>
-            <input 
+            <input
               className={styles.input}
-              placeholder='Email Address'
-              type='email'
-            />  
+              placeholder="Email Address"
+              type="email"
+            />
           </div>
-          <input 
-            type='checkbox'
-          />
+          <input type="checkbox" />
           <div className={styles.inputCont}>
             <label className={styles.label}>SMS</label>
-            <input 
+            <input
               className={styles.input}
-              placeholder='Cell Phone Number'
-              type='text'
-            />  
+              placeholder="Cell Phone Number"
+              type="text"
+            />
           </div>
         </div>
       </form>
       <div className={styles.rightCont}>
-        <Image 
+        <Image
           className={styles.image}
-          src={CreditCard} 
-          width={350} 
-          height={175} 
+          src={CreditCard}
+          width={350}
+          height={175}
           alt="image of credit card"
         />
-        <div className={styles.buttonsContainer} >
-          <button  className={styles.cancelButton+" "+styles.buttons} >
+        <div className={styles.buttonsContainer}>
+          <button className={styles.cancelButton + " " + styles.buttons}>
             Cancel
           </button>
-          <button className={styles.nextButton+" "+styles.buttons} >
+          <button
+            onClick={(e) => {
+              activePageHandler("submit");
+            }}
+            className={styles.nextButton + " " + styles.buttons}>
             Next
           </button>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

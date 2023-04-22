@@ -36,7 +36,9 @@ const Dashboard = () => {
         {activePage === "profile" && (
           <Profile activePageHandler={activePageHandler} />
         )}
-        {activePage === "card" && <Card />}
+        {activePage === "card" && (
+          <Card activePageHandler={activePageHandler} />
+        )}
         {activePage === "submit" && <Submit />}
       </div>
     </div>
